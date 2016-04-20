@@ -107,6 +107,7 @@ To contribute you need to compile Tds from source and test it:
 ```
 $ git clone https://github.com/livehelpnow/tds_ecto.git
 $ cd tds_ecto
+$ mix deps.get
 $ mix test
 ```
 
@@ -114,7 +115,7 @@ The tests require an addition to your hosts file to connect to your sql server d
 
 <IP OF SQL SERVER>	mssql.local
 
-Additionally SQL authentication needs to be used for connecting and testing. Add the user `test_user` with access to the database `test_db`. See one of the test files for the connection information and port number.
+Additionally SQL authentication needs to be used for connecting and testing. Add the user `mssql` with access to the database `ecto_test`. Refer to `test/storage_test.exs` and `test/test_helper.exs` for the connection information and port number.
 
 ## License
 
